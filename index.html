@@ -5,130 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mohammad Omar Faruke - Portfolio</title>
   <style>
-    /* Reset & base */
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
     body {
       margin: 0;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      background: #f4f7f9;
-      color: #2c3e50;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #fdfbfb, #ebedee);
+      color: #333;
       line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
     }
-    a {
-      color: #0077cc;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    a:hover,
-    a:focus {
-      color: #005fa3;
-      outline: none;
-      text-decoration: underline;
-    }
-    /* Container */
     .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 40px 50px;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
     header {
       text-align: center;
       margin-bottom: 40px;
     }
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.2em;
-      color: #1a202c;
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #0077cc;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
     }
-    header p {
-      font-size: 1.15rem;
-      font-weight: 500;
-      color: #4a5568;
+    h1 {
+      font-size: 2.5rem;
+      color: #2c3e50;
+      margin: 0;
+    }
+    p.subtitle {
+      font-size: 1.2rem;
+      color: #0077cc;
     }
     section {
-      margin-bottom: 40px;
+      background: white;
+      padding: 30px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
     }
-    section h2 {
-      font-size: 1.8rem;
-      border-bottom: 3px solid #0077cc;
-      padding-bottom: 8px;
+    h2 {
+      border-left: 5px solid #0077cc;
+      padding-left: 12px;
+      color: #2c3e50;
       margin-bottom: 20px;
-      color: #1a202c;
     }
-    /* About */
-    .about p {
-      font-size: 1.1rem;
-      color: #4a5568;
-      white-space: pre-line;
+    .about p, .contact p, .project p {
+      font-size: 1.05rem;
+      color: #555;
     }
-    /* Projects */
-    .project {
-      margin-bottom: 28px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #e2e8f0;
+    .project a {
+      color: #0077cc;
+      font-weight: bold;
     }
-    .project h3 {
-      margin: 0 0 8px 0;
-      color: #2b6cb0;
-      font-weight: 600;
-      font-size: 1.3rem;
-    }
-    .project p {
-      font-size: 1rem;
-      color: #4a5568;
-      margin: 0 0 8px 0;
-    }
-    /* Contact */
-    .contact p {
-      font-size: 1.1rem;
-      color: #4a5568;
-    }
-    .contact a {
-      font-weight: 600;
-    }
-    /* Footer */
     footer {
       text-align: center;
-      padding: 20px 0;
+      padding: 20px;
       font-size: 0.9rem;
-      color: #a0aec0;
-      margin-top: auto;
-      background: #f7fafc;
+      color: #777;
+      background: #f4f6f8;
     }
-    /* Responsive */
     @media (max-width: 600px) {
       .container {
-        padding: 30px 20px;
-        margin: 20px 10px;
+        padding: 20px 10px;
       }
-      header h1 {
-        font-size: 2rem;
-      }
-      section h2 {
-        font-size: 1.5rem;
+      .profile-img {
+        width: 120px;
+        height: 120px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container" role="main">
+  <div class="container">
     <header>
+      <img src="omar.jpg" alt="Mohammad Omar Faruke" class="profile-img" />
       <h1>Mohammad Omar Faruke</h1>
-      <p>SEO &amp; Web Technologies Specialist | Accounting &amp; Financial Research Background</p>
+      <p class="subtitle">SEO & Web Tech Specialist | Financial & Digital Strategist</p>
     </header>
 
-    <section class="about" aria-label="About Me">
+    <section class="about">
       <h2>About Me</h2>
       <p>
         I am a detail-oriented and results-driven professional with a strong foundation in SEO, keyword research, and web technologies such as HTML and CSS.
@@ -138,23 +96,25 @@
       </p>
     </section>
 
-    <section class="projects" aria-label="Projects">
+    <section class="projects">
       <h2>Projects</h2>
-      <article class="project">
+      <div class="project">
         <h3>Shikhonbd.com</h3>
-        <p>An educational resources platform dedicated to empowering learners in Bangladesh.</p>
-        <p><a href="https://shikhonbd.com" target="_blank" rel="noopener noreferrer">Visit Shikhonbd.com</a></p>
-      </article>
+        <p>
+          A website I own and developed. Shikhonbd is an educational resource platform empowering learners in Bangladesh.
+        </p>
+        <p><a href="https://shikhonbd.com" target="_blank">Visit Shikhonbd.com</a></p>
+      </div>
     </section>
 
-    <section class="contact" aria-label="Contact Information">
+    <section class="contact">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:omarfaruke03@gmail.com">omarfaruke03@gmail.com</a></p>
     </section>
   </div>
 
   <footer>
-    &copy; 2025 Mohammad Omar Faruke
+    &copy; 2025 Mohammad Omar Faruke. All rights reserved.
   </footer>
 </body>
 </html>
